@@ -24,8 +24,9 @@ export class SearchForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='searchFormContainer'>
                 <input
+                    placeholder='What do you want to watch?'
                     type="text"
                     value={this.state.searchQuery}
                     onChange={this.handleInputChange}
