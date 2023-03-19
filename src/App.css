@@ -78,7 +78,7 @@
   padding: 0px 20px;
 }
 
-.genreSelectContainer a {
+.genreSelectContainer span {
   text-decoration: none;
   height: 50px;
   padding: 0px 10px;
@@ -87,7 +87,11 @@
   text-transform: uppercase;
 }
 
-.genreSelectContainer a.active {
+.genreSelectContainer span:hover {
+  cursor: pointer;
+}
+
+.genreSelectContainer span.active {
   border-bottom: 4px solid #f65261;
 }
 

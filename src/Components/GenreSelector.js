@@ -9,12 +9,19 @@ export class GenreSelector extends React.Component {
         };
     }
 
+    selectGenre(genre){
+        let state = {...genre};
+        state.selected = genre.id;
+        this.setState(state);
+        this.props.onSelectGenre(genre)
+    }
+
     render() {
         return (
             <div className='genreSelectContainer'>
                 <li>
                     {this.state.genreList.map(
-                        (genre) => <a href='#top' className={`${genre.id === this.state.selected ? "active" : ""}`} onClick={this.props.onSelectGenre(genre)} key={genre.id}>{genre.name}</a>
+                        (genre) => <span className={`${genre.id === this.state.selected ? "active" : ""}`} onClick={()=>this.selectGenre(genre)} key={genre.id}>{genre.name}</span>
                     )}
                 </li>
             </div>
