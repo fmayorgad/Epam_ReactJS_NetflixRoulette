@@ -15,31 +15,38 @@ export class Counter extends React.Component {
     render() {
         return React.createElement(
             'div',
-            null,
+            { className: 'counterContainer' },
             React.createElement(
-                'h1',
-                { className: 'componentTitle' },
+                'h2',
+                { className: 'counterTitle' },
                 title,
+            ),
+            React.createElement(
+                'div',
+                { className: 'counterBody' },
+
                 React.createElement(
                     'p',
-                    null,
+                    {className: 'counterLabel'},
                     this.state.counter
                 ),
                 React.createElement(
                     'button',
                     {
                         className: 'increaseButton',
-                         onClick: () => this.operateCounter('increase') },
+                        onClick: () => this.operateCounter('increase')
+                    },
                     'Increase Counter'
                 ),
                 React.createElement(
                     'button',
                     {
                         className: 'decreaseButton',
-                         onClick: () => this.operateCounter('decrease') },
+                        onClick: () => this.operateCounter('decrease')
+                    },
                     'Decrease Counter'
                 )
-            )
+            ),
         )
     }
 }
