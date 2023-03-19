@@ -71,3 +71,26 @@
   font-size: 20px;
   border: 0px;
 }
+
+.genreSelectContainer li {
+  list-style-type: none;
+  display: flex;
+  padding: 0px 20px;
+}
+
+.genreSelectContainer a {
+  text-decoration: none;
+  height: 50px;
+  padding: 0px 10px;
+  color: white;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+.genreSelectContainer a.active {
+  border-bottom: 4px solid #f65261;
+}
+
+.genreSelectContainer{
+  margin-bottom: 100px;
+}
