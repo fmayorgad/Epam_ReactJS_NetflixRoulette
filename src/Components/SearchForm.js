@@ -12,7 +12,8 @@ export class SearchForm extends React.Component {
         this.setState({ searchQuery: event.target.value });
     };
 
-    handleButtonClicked = () => {
+    handleButtonClicked = (event) => {
+        event.preventDefault();
         this.props.onSearch(this.state.searchQuery);
     };
 
@@ -26,14 +27,10 @@ export class SearchForm extends React.Component {
     render() {
         return (
             <div className='searchFormContainer'>
-                <input
-                    placeholder='What do you want to watch?'
-                    type="text"
-                    value={this.state.searchQuery}
-                    onChange={this.handleInputChange}
-                    onKeyDown={this.handleKeyDown}
-                />
-                <button onClick={this.handleButtonClicked}>Search</button>
+                <form onSubmit={this.handleButtonClicked}>
+                    <input placeholder="What do you want to watch" type="text" onKeyDown={this.handleKeyDown} value={this.state.searchQuery} onChange={this.handleInputChange} />         
+                    <button type="submit"value="Submit" >Search</button>
+                </form>
             </div>
         );
     }
