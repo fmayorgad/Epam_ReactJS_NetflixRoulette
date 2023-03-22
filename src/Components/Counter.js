@@ -1,15 +1,16 @@
 import React from 'react';
 const title = 'Counter';
+
 export class Counter extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            counter: parseInt(props.initialValue)
+            counter: props.initialValue || 0
         }
     }
 
     operateCounter(action) {
-        this.setState({ counter: action === 'increase' ? this.state.counter + 1 : this.state.counter - 1 })
+        this.setState((prevState) => ({ counter: action === 'increase' ? prevState.counter + 1 : prevState.counter - 1 }));
     }
 
     render() {

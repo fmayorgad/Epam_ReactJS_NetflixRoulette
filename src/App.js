@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      <Counter initialValue='0' />
+      <Counter initialValue={0} />
       <SearchForm onSearch={onSearch} searchQuery='Drama' />
       <GenreSelector selectedGenre={0}  genreList={genreList} onSelectGenre={onSelectGenre}  />
     </div>

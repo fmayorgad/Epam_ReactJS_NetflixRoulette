@@ -18,6 +18,7 @@ export class SearchForm extends React.Component {
 
     handleKeyDown = (event) => {
         if (event.keyCode === 13) {
+            event.preventDefault();
             this.props.onSearch(this.state.searchQuery);
         }
     };
