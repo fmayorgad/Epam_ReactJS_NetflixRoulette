@@ -2,3 +2,99 @@
   background-color: #282c34;
   min-height: 100vh;
 }
+
+.counterContainer {
+  display: grid;
+  border: 2px solid white;
+  width: 500px;
+  padding: 20px;
+}
+
+.counterTitle {
+  color: white;
+}
+
+.counterBody {
+  display: flex;
+  justify-content: space-evenly;
+  height: 45px;
+}
+
+.counterLabel {
+  font-size: 36px;
+  color: white;
+  align-self: center;
+  margin: 0px;
+}
+
+.searchFormContainer {
+  margin-top: 100px;
+  display: flex;
+  padding: 100px;
+  background-image: url(https://genotipia.com/wp-content/uploads/2020/04/Netflix-Background-prueba-1.jpg);
+}
+
+.searchFormContainer input {
+  width: 713px;
+  height: 48px;
+  left: 178px;
+  top: 242px;
+  background: rgba(50, 50, 50, 0.8);
+  mix-blend-mode: normal;
+  opacity: 0.7;
+  border-radius: 4px;
+  line-height: 23px;
+  margin: 0px 10px;
+  border: 0px;
+  color: white;
+  font-size: 21px;
+  padding: 0px 20px;
+  flex: auto;
+}
+
+.searchFormContainer input::placeholder {
+  font-weight: lighter;
+  font-size: 23px;
+  opacity: 0.5;
+  color: rgb(247, 247, 247);
+}
+
+.searchFormContainer button {
+  width: 233px;
+  height: 47px;
+  left: 905px;
+  top: 242px;
+  background: #f65261;
+  border-radius: 4px;
+  margin: 0px 10px;
+  color: white;
+  font-size: 20px;
+  border: 0px;
+}
+
+.genreSelectContainer li {
+  list-style-type: none;
+  display: flex;
+  padding: 0px 20px;
+}
+
+.genreSelectContainer span {
+  text-decoration: none;
+  height: 50px;
+  padding: 0px 10px;
+  color: white;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+.genreSelectContainer span:hover {
+  cursor: pointer;
+}
+
+.genreSelectContainer span.active {
+  border-bottom: 4px solid #f65261;
+}
+
+.genreSelectContainer{
+  margin-bottom: 100px;
+}
