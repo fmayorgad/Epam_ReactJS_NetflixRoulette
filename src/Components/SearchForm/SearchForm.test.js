@@ -10,20 +10,9 @@ describe('Test SearchForm Component', () => {
         console.log(input);
     }
 
-    const handleInputChange = (e) => {
-        console.log("cambiado")
-    };
-
     const handleButtonClicked = (e) => {
         e.preventDefault();
         console.log("clickado")
-    };
-
-    const handleKeyDown = (e) => {
-        if (e.keyCode === 13) {
-            e.preventDefault();
-            console.log("presionado")
-        }
     };
 
     test('renders an input with the value equal to initial value passed in props', () => {
@@ -45,7 +34,7 @@ describe('Test SearchForm Component', () => {
 
         render(<div className='searchFormContainer'>
             <form onSubmit={handleButtonClicked}>
-                <input role="searchbox" placeholder="What do you want to watch" type="text" value={state.searchQuery} onChange={handleInputChange} />
+                <input role="searchbox" placeholder="What do you want to watch" type="text" defaultValue={state.searchQuery} onChange={handleInputChange} />
                 <button type="submit" value="Submit" >Search</button>
             </form>
         </div>);
@@ -80,7 +69,7 @@ describe('Test SearchForm Component', () => {
 
         render(<div className='searchFormContainer'>
             <form onSubmit={handleButtonClicked}>
-                <input role="searchbox" placeholder="What do you want to watch" type="text" value={state.searchQuery} onKeyDown={handleKeyDown} />
+                <input role="searchbox" placeholder="What do you want to watch" type="text" defaultValue={state.searchQuery} onKeyDown={handleKeyDown} />
                 <button type="submit" value="Submit" >Search</button>
             </form>
         </div>);
