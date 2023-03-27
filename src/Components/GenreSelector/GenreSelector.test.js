@@ -19,11 +19,19 @@ describe('Test GenreSelector Component', () => {
         console.log(e);
     }
 
+    
 
     test('renders all genres passedin props', () => {
         render(<GenreSelector selectedGenre={selectedGenre} genreList={genreList} onSelectGenre={onSelectGenre} />);
         const counterLabel = screen.getAllByRole('tab');
         expect(counterLabel.length).toEqual(genreList.length);
+    })
+
+    test('highlights a selected genre passed in props', () => {
+        render(<GenreSelector selectedGenre={selectedGenre} genreList={genreList} onSelectGenre={onSelectGenre} />);
+        const counterLabel = screen.getAllByRole('tab');
+        const selectedItem = counterLabel.filter(c=>c.classList.contains('active')).reduce(c=>c);
+        expect(parseInt(selectedItem.id)).toEqual(selectedGenre);
     })
 
     /*     test('increments the displayed value when "increment" button is clicked', () => {
