@@ -72,13 +72,13 @@
   border: 0px;
 }
 
-.genreSelectContainer li {
+.genreSelectContainer ol {
   list-style-type: none;
   display: flex;
   padding: 0px 20px;
 }
 
-.genreSelectContainer span {
+.genreSelectContainer li {
   text-decoration: none;
   height: 50px;
   padding: 0px 10px;
@@ -87,11 +87,11 @@
   text-transform: uppercase;
 }
 
-.genreSelectContainer span:hover {
+.genreSelectContainer li:hover {
   cursor: pointer;
 }
 
-.genreSelectContainer span.active {
+.genreSelectContainer li.active {
   border-bottom: 4px solid #f65261;
 }
 
