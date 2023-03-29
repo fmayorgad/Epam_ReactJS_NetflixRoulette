@@ -16,32 +16,31 @@ describe('Test GenreSelector Component', () => {
     const selectedGenre = 0;
 
     const onSelectGenre = (e) => {
-        console.log(e);
     }
 
     test('renders all genres passedin props', () => {
         render(<GenreSelector selectedGenre={selectedGenre} genreList={genreList} onSelectGenre={onSelectGenre} />);
-        const counterLabel = screen.getAllByRole('tab');
+        const counterLabel = screen.getAllByTestId('genre');
         expect(counterLabel.length).toEqual(genreList.length);
     })
 
     test('highlights a selected genre passed in props', () => {
         render(<GenreSelector selectedGenre={selectedGenre} genreList={genreList} onSelectGenre={onSelectGenre} />);
-        const counterLabel = screen.getAllByRole('tab');
+        const counterLabel = screen.getAllByTestId('genre');
         const selectedItem = counterLabel.filter(c => c.classList.contains('active')).reduce(c => c);
         expect(parseInt(selectedItem.id)).toEqual(selectedGenre);
     })
 
     test('click event on a genre button component calls "onChange" callback and passes correct genre in arguments', () => {
         const onSelectGenre = jest.fn((e) => {
-            console.log('called by element:', e);
         });
         render(<GenreSelector selectedGenre={selectedGenre} genreList={genreList} onSelectGenre={onSelectGenre} />);
-        const counterLabel = screen.getAllByRole('tab');
+        const counterLabel = screen.getAllByTestId('genre');
         const selectedItem = counterLabel.filter(c => c.classList.contains('active')).reduce(c => c);
         fireEvent.click(selectedItem);
         
         expect(onSelectGenre).toHaveBeenCalled();
+        expect(onSelectGenre).toHaveBeenLastCalledWith({id:0, name: 'all'});
     });
 
 });

@@ -6,9 +6,8 @@ describe('Test SearchForm Component', () => {
 
     const searchPassedtoComponent = 'Drama';
 
-    const onSearch = (input) => {
-        console.log(input);
-    }
+    const onSearch = jest.fn((e) => {
+    });
 
     const handleButtonClicked = (e) => {
         e.preventDefault();

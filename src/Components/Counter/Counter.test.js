@@ -10,6 +10,15 @@ describe('Test Counter Component', () => {
         expect(counterLabel).toBeInTheDocument();
     })
 
+    test('renders increase and decrease buttons', () => {
+        const initialValue = 0;
+        render(<Counter initialValue={initialValue} />);
+        const incrementButton = screen.getByText(/Increase Counter/i);
+        const decrementButton = screen.getByText(/Decrease Counter/i);
+        expect(incrementButton).toBeInTheDocument();
+        expect(decrementButton).toBeInTheDocument();
+    })
+
     test('increments the displayed value when "increment" button is clicked', () => {
         const initialValue = 5;
         render(<Counter initialValue={initialValue} />);

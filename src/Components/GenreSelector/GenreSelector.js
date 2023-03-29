@@ -19,9 +19,9 @@ export class GenreSelector extends React.Component {
     render() {
         return (
             <div className='genreSelectContainer'>
-                <ol role="tablist">
+                <ol data-testid="genreContainer">
                     {this.state.genreList.map(
-                        (genre) => <li role="tab" className={`${genre.id === this.state.selected ? "active" : ""}`} id={genre.id} onClick={()=>this.selectGenre(genre)} key={genre.id}>{genre.name}</li>
+                        (genre) => <li data-testid="genre" className={`${genre.id === this.state.selected ? "active" : ""}`} id={genre.id} onClick={()=>this.selectGenre(genre)} key={genre.id}>{genre.name}</li>
                     )}
                 </ol>
             </div>
