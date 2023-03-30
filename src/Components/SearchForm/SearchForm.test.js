@@ -27,16 +27,11 @@ describe('Test SearchForm Component', () => {
             searchQuery: ''
         }
 
-        const handleInputChange = jest.fn((e) => {
-            state.searchQuery = e.target.value;
+        const handleInputChangeSpy = jest.fn((e) => {  
+            state.searchQuery = e
         });
 
-        render(<div className='searchFormContainer'>
-            <form onSubmit={handleButtonClicked}>
-                <input role="searchbox" placeholder="What do you want to watch" type="text" defaultValue={state.searchQuery} onChange={handleInputChange} />
-                <button type="submit" value="Submit" >Search</button>
-            </form>
-        </div>);
+        render(<SearchForm onSearch ={handleInputChangeSpy}/>);
 
         const input = screen.getByRole('searchbox');
         const submitButton = screen.getByText('Search');
@@ -44,7 +39,7 @@ describe('Test SearchForm Component', () => {
         fireEvent.change(input, { target: { value: newValue } });
         fireEvent.click(submitButton);
 
-        expect(handleInputChange).toHaveBeenCalledTimes(1);
+        expect(handleInputChangeSpy).toHaveBeenCalledTimes(1);
         expect(state.searchQuery).toEqual(newValue);
     })
 
@@ -55,30 +50,19 @@ describe('Test SearchForm Component', () => {
             searchQuery: ''
         }
 
-        const handleInputChange = jest.fn((e) => {
-            state.searchQuery = e.target;
+        const handleInputChangeSpy = jest.fn((e) => {
+            state.searchQuery = e;
         });
 
-        const handleKeyDown = jest.fn((e) => {
-            console.log(e.target.value)
-            if (e.keyCode === 13) {
-                handleInputChange(e.target.value);
-            }
-        });
-
-        render(<div className='searchFormContainer'>
-            <form onSubmit={handleButtonClicked}>
-                <input role="searchbox" placeholder="What do you want to watch" type="text" defaultValue={state.searchQuery} onKeyDown={handleKeyDown} />
-                <button type="submit" value="Submit" >Search</button>
-            </form>
-        </div>);
+        render(<SearchForm onSearch ={handleInputChangeSpy}/>);
 
         const input = screen.getByRole('searchbox');
-
-        fireEvent.keyDown(input, { key: 'Enter', code: 'Enter', charCode: 13, keyCode: 13, target: { value: newValue } })
+        
         fireEvent.change(input, { target: { value: newValue } });
+        fireEvent.keyDown(input, { key: 'Enter', code: 'Enter', charCode: 13, keyCode: 13, target: { value: newValue } })
+        
 
-        expect(handleInputChange).toHaveBeenCalledTimes(1);
-        expect(handleInputChange).toHaveBeenCalledWith(newValue);
+        expect(handleInputChangeSpy).toHaveBeenCalledTimes(1);
+        expect(handleInputChangeSpy).toHaveBeenCalledWith(newValue);
     })
 });
