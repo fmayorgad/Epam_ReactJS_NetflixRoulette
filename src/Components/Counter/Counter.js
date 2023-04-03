@@ -35,7 +35,8 @@ export class Counter extends React.Component {
                     'button',
                     {
                         className: 'increaseButton',
-                        onClick: () => this.operateCounter('increase')
+                        onClick: () => this.operateCounter('increase'),
+                        id: 'incrementButton'
                     },
                     'Increase Counter'
                 ),
@@ -43,7 +44,8 @@ export class Counter extends React.Component {
                     'button',
                     {
                         className: 'decreaseButton',
-                        onClick: () => this.operateCounter('decrease')
+                        onClick: () => this.operateCounter('decrease'),
+                        id: 'decrementButton'
                     },
                     'Decrease Counter'
                 )

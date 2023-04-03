@@ -1,7 +1,7 @@
 import './App.css';
-import { Counter } from './Components/Counter';
-import { SearchForm } from './Components/SearchForm';
-import {GenreSelector} from './Components/GenreSelector'
+import { Counter } from './Components/Counter/Counter';
+import { SearchForm } from './Components/SearchForm/SearchForm';
+import {GenreSelector} from './Components/GenreSelector/GenreSelector'
 
 function App() {
 
