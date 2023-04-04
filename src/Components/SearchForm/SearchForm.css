@@ -1,6 +1,8 @@
 .searchFormContainer {
   margin-top: 100px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 100px;
   background-image: url(https://genotipia.com/wp-content/uploads/2020/04/Netflix-Background-prueba-1.jpg);
 }
