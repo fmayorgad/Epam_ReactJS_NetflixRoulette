@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './GenreSelector.css';
 export class GenreSelector extends React.Component {
     constructor(props) {
         super(props);
