@@ -7,7 +7,7 @@ const config = {
     "@storybook/preset-create-react-app",
     "@storybook/addon-interactions",
     "@storybook/addon-postcss",
-    "@storybook-css-modules-preset",
+    "storybook-css-modules-preset",
   ],
   framework: {
     name: "@storybook/react-webpack5",
