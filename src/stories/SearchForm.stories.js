@@ -1,7 +1,7 @@
 import { SearchForm } from '../Components/SearchForm/SearchForm';
 
 export default {
-    title: 'SearchForm component',
+    title: 'Components / SearchForm',
     component: SearchForm,
 }
 

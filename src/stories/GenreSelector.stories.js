@@ -1,7 +1,7 @@
 import { GenreSelector } from '../Components/GenreSelector/GenreSelector';
 
 export default {
-    title: 'GenreSelector component',
+    title: 'Components / GenreSelector',
     component: GenreSelector,
 }
 
