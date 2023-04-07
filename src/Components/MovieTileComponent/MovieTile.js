@@ -6,7 +6,7 @@ export class MovieTile extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            searchQuery: props.searchQuery
+            ...props
         };
     }
 
@@ -17,11 +17,11 @@ export class MovieTile extends React.Component {
     render() {
         return (
             <a href='#link' className='movieTileContainer'>
-                <img alt="movie" className='movieTileImage' src={nomovieImage} />
+                <img alt="movie" className='movieTileImage' src={this.state.urlImage ? this.state.urlImage : nomovieImage } />
                 <div className='movieTileInfoContainer'>
-                    <h3 className='movieTileTitle'>Titnic</h3>
-                    <p className='movieTileYearLabel'>2000</p>
-                    <p className='movieTileGenres'>Drama</p>
+                    <h3 className='movieTileTitle'>{this.state.name ? this.state.name : '-'}</h3>
+                    <p className='movieTileYearLabel'>{this.state.releaseYear ? this.state.releaseYear : '-'}</p>
+                    <p className='movieTileGenres'>{this.state.genres.length > 0 ? this.state.genres.join(' , ') : '-'}</p>
                 </div>
             </a>
         );

@@ -22,6 +22,9 @@
   border: 1px solid grey;
   border-radius: 4px;
   font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .movieTileTitle {
@@ -37,6 +40,9 @@
   width: 100%;
   margin: 0;
   font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .movieTileInfoContainer {

@@ -1,5 +1,4 @@
 import './App.css';
-import { Counter } from './Components/Counter/Counter';
 import { SearchForm } from './Components/SearchForm/SearchForm';
 import { GenreSelector } from './Components/GenreSelector/GenreSelector'
 import { MovieTile } from './Components/MovieTileComponent/MovieTile';
@@ -15,6 +14,13 @@ function App() {
     { id: 5, name: 'crime' },
   ]
 
+  const movieProps = {
+    urlImage: 'https://lumiere-a.akamaihd.net/v1/images/image_b88fdde2.jpeg?region=0,0,540,810&width=480',
+    name: 'Titanic in the desert',
+    releaseYear: 2033,
+    genres: ['Drama', 'Action', 'Romance']
+  };
+
   const onSearch = function (input) {
     console.log(input);
   }
@@ -25,10 +31,9 @@ function App() {
 
   return (
     <div className="App">
-      <Counter initialValue={0} />
       <SearchForm onSearch={onSearch} searchQuery='Drama' />
       <GenreSelector selectedGenre={0} genreList={genreList} onSelectGenre={onSelectGenre} />
-      <MovieTile />
+      <MovieTile {...movieProps}/>
     </div>
   );
 }
