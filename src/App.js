@@ -29,11 +29,15 @@ function App() {
     console.log(genre)
   }
 
+  const onSelectMovieTile = function (genre) {
+    console.log(genre)
+  }
+
   return (
     <div className="App">
       <SearchForm onSearch={onSearch} searchQuery='Drama' />
       <GenreSelector selectedGenre={0} genreList={genreList} onSelectGenre={onSelectGenre} />
-      <MovieTile {...movieProps}/>
+      <MovieTile onSelectMovieTile={onSelectMovieTile} {...movieProps}/>
     </div>
   );
 }

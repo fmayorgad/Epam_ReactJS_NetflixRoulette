@@ -10,18 +10,22 @@ export class MovieTile extends React.Component {
         };
     }
 
-    handleClick = (event) => {
-        this.setState({ searchQuery: event.target.value });
+    handleClick = () => {
+        this.props.onSelectMovieTile(this.state);
     };
 
     render() {
         return (
-            <a href='#link' className='movieTileContainer'>
-                <img alt="movie" className='movieTileImage' src={this.state.urlImage ? this.state.urlImage : nomovieImage } />
+            <a href='#link' className='movieTileContainer' onClick={() => this.handleClick()}>
+                <img alt="movie" className='movieTileImage' src={this.state.urlImage ? this.state.urlImage : nomovieImage} />
                 <div className='movieTileInfoContainer'>
                     <h3 className='movieTileTitle'>{this.state.name ? this.state.name : '-'}</h3>
                     <p className='movieTileYearLabel'>{this.state.releaseYear ? this.state.releaseYear : '-'}</p>
-                    <p className='movieTileGenres'>{this.state.genres.length > 0 ? this.state.genres.join(' , ') : '-'}</p>
+                    <p className='movieTileGenres'>
+                        {
+                            this.state.genres.length > 0 ?
+                                (this.state.genres.length > 2 ? this.state.genres.join(' , ') : this.state.genres.join(' & ')) : '-'
+                        }</p>
                 </div>
             </a>
         );
