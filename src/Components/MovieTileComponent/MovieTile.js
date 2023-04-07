@@ -16,8 +16,8 @@ export class MovieTile extends React.Component {
 
     render() {
         return (
-            <a href='#link' className='movieTileContainer' onClick={() => this.handleClick()}>
-                <img alt="movie" className='movieTileImage' src={this.state.urlImage ? this.state.urlImage : nomovieImage} />
+            <a role="button" href='#link' className='movieTileContainer' onClick={() => this.handleClick()}>
+                <img alt="moviePoster" className='movieTileImage' src={this.state.urlImage ? this.state.urlImage : nomovieImage} />
                 <div className='movieTileInfoContainer'>
                     <h3 className='movieTileTitle'>{this.state.name ? this.state.name : '-'}</h3>
                     <p className='movieTileYearLabel'>{this.state.releaseYear ? this.state.releaseYear : '-'}</p>
