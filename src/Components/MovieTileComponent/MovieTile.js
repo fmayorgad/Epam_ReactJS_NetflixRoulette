@@ -1,6 +1,6 @@
 import React from 'react';
 import './MovieTile.css';
-import nomovieImage from '../../../public/nomovie.png';
+import nomovieImage from './nomovie.png';
 export class MovieTile extends React.Component {
 
     constructor(props) {
@@ -17,11 +17,11 @@ export class MovieTile extends React.Component {
     render() {
         return (
             <a href='#link' className='movieTileContainer'>
-                <img alt="" src={{nomovieImage}} />
+                <img alt="movie" className='movieTileImage' src={nomovieImage} />
                 <div className='movieTileInfoContainer'>
-                    <h3 className='movieTileTitle'>-</h3>
-                    <p className='movieTileName'>-</p>
-                    <p className='movieTileYear'>-</p>
+                    <h3 className='movieTileTitle'>Titnic</h3>
+                    <p className='movieTileYearLabel'>2000</p>
+                    <p className='movieTileGenres'>Drama</p>
                 </div>
             </a>
         );

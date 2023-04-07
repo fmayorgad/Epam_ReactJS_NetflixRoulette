@@ -1,7 +1,8 @@
 import './App.css';
 import { Counter } from './Components/Counter/Counter';
 import { SearchForm } from './Components/SearchForm/SearchForm';
-import {GenreSelector} from './Components/GenreSelector/GenreSelector'
+import { GenreSelector } from './Components/GenreSelector/GenreSelector'
+import { MovieTile } from './Components/MovieTileComponent/MovieTile';
 
 function App() {
 
@@ -26,7 +27,8 @@ function App() {
     <div className="App">
       <Counter initialValue={0} />
       <SearchForm onSearch={onSearch} searchQuery='Drama' />
-      <GenreSelector selectedGenre={0}  genreList={genreList} onSelectGenre={onSelectGenre}  />
+      <GenreSelector selectedGenre={0} genreList={genreList} onSelectGenre={onSelectGenre} />
+      <MovieTile />
     </div>
   );
 }
