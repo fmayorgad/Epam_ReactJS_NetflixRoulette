@@ -12,7 +12,7 @@ describe('Test MovieTile Component', () => {
     test('renders initial value provided in props for Title, Genres, a poster image and Year', () => {
         render(<MovieTile {...movieProps} />);
         const title = screen.getByRole('heading', `${movieProps.name}`);
-        const genres = screen.getByText(`${movieProps.genres.join(' , ')}`);
+        const genres = screen.getByText(/drama , action , romance/i);
         const releaseYear = screen.getByText(movieProps.releaseYear)
         const moviePoster = screen.getByRole('img', {
             name: /movieposter/i
