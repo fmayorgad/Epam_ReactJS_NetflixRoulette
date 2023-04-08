@@ -6,7 +6,7 @@ export class MovieDetails extends React.Component {
         super(props);
         this.state = { ...props };
     }
-
+    
     render() {
         return (
             <section className='MovieDetailsContainer'>
