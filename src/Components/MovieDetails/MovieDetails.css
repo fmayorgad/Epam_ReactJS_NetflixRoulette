@@ -68,19 +68,27 @@
   color: #f65261;
 }
 
-.movieDetailContainer{
-    width: 100%;
-    margin: 20px 0px;
+.movieDetailContainer {
+  width: 100%;
+  margin: 20px 0px;
 }
 
-.movieDetailDescription{
-    font-family: "Montserrat";
-    mix-blend-mode: normal;
-    opacity: 0.7;
-    color: white;  
+.movieDetailDescription {
+  font-family: "Montserrat";
+  mix-blend-mode: normal;
+  opacity: 0.7;
+  color: white;
 }
 
-.movieDetailMainInfoContainer{
-    display: flex;
-    width: 100%;
-} 
+.movieDetailMainInfoContainer {
+  display: flex;
+  width: 100%;
+}
+
+.movieDetailContainer  span:first-child{
+  margin-right: 45px;
+}
+
+.movieDetailDescription::first-letter{
+  text-transform: capitalize;
+}
