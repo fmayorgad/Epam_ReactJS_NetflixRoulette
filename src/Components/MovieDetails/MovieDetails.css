@@ -1,0 +1,16 @@
+.movieTileImage {
+    background-size: contain;
+    width: 323.41px;
+    height: 486px;
+}
+
+.movieDetailTitle{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+}
