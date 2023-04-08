@@ -1,0 +1,32 @@
+.SortControlContainer * {
+  opacity: 0.7;
+  color: white;
+  margin-right: 31px;
+  mix-blend-mode: normal;
+}
+
+.SortControlContainer label {
+  font-family: "Montserrat";
+}
+
+.SortControlContainer select {
+  background: #424242;
+  border: none;
+  width: 150px;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  font-family: "Montserrat";
+  border: 0px;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path color="red" fill="red" stroke="red" d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>')
+    96% / 15% no-repeat #333;
+}
+
+.SortControlContainer select:focus,
+select:hover {
+  outline: none;
+  border: 0px;
+}

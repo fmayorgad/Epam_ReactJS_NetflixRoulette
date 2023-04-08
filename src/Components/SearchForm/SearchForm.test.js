@@ -9,11 +9,6 @@ describe('Test SearchForm Component', () => {
     const onSearch = jest.fn((e) => {
     });
 
-    const handleButtonClicked = (e) => {
-        e.preventDefault();
-        console.log("clickado")
-    };
-
     test('renders an input with the value equal to initial value passed in props', () => {
         render(<SearchForm onSearch={onSearch} searchQuery={searchPassedtoComponent} />);
         const input = screen.getByRole('searchbox');
@@ -27,11 +22,11 @@ describe('Test SearchForm Component', () => {
             searchQuery: ''
         }
 
-        const handleInputChangeSpy = jest.fn((e) => {  
+        const handleInputChangeSpy = jest.fn((e) => {
             state.searchQuery = e
         });
 
-        render(<SearchForm onSearch ={handleInputChangeSpy}/>);
+        render(<SearchForm onSearch={handleInputChangeSpy} />);
 
         const input = screen.getByRole('searchbox');
         const submitButton = screen.getByText('Search');
@@ -54,13 +49,13 @@ describe('Test SearchForm Component', () => {
             state.searchQuery = e;
         });
 
-        render(<SearchForm onSearch ={handleInputChangeSpy}/>);
+        render(<SearchForm onSearch={handleInputChangeSpy} />);
 
         const input = screen.getByRole('searchbox');
-        
+
         fireEvent.change(input, { target: { value: newValue } });
         fireEvent.keyDown(input, { key: 'Enter', code: 'Enter', charCode: 13, keyCode: 13, target: { value: newValue } })
-        
+
 
         expect(handleInputChangeSpy).toHaveBeenCalledTimes(1);
         expect(handleInputChangeSpy).toHaveBeenCalledWith(newValue);
