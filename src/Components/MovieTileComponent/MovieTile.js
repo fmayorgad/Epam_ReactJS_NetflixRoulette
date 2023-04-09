@@ -1,6 +1,7 @@
 import React from 'react';
 import './MovieTile.css';
 import nomovieImage from './nomovie.png';
+
 export class MovieTile extends React.Component {
 
     constructor(props) {
