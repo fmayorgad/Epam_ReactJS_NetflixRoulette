@@ -6,7 +6,7 @@ export default {
 }
 
 const handleAction = () => {
-    console.log('You have handle that!');
+    console.log('You have handled that!');
 }
 
 const Template = args => <CustomDialog {...args} />

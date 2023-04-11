@@ -1,0 +1,49 @@
+.customDialogContainer{
+    width: fit-content;
+}
+
+.customDialogContainer {
+  display: grid;
+  background-color: #232323;
+}
+
+.customDialogHeaderContainer {
+  display: flex;
+  height: 50px;
+}
+
+.closeDialogButton {
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  border: 0px;
+}
+
+.closeDialogButton:hover {
+  background-color: #3f3f3f;
+  cursor: pointer;
+}
+
+.customDialogTitle h2{
+    line-height: 50px;
+    color: white;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    mix-blend-mode: normal;
+    opacity: 0.7;
+    margin: 0;
+    padding: 0px 20px;
+    font-family: 'Montserrat';
+    font-weight: 100;
+}
+
+.customDialogContent{
+    mix-blend-mode: normal;
+    opacity: 0.7;
+    margin: 0;
+    padding: 0px 20px;
+    font-family: 'Montserrat';
+    color: white;
+}
+
