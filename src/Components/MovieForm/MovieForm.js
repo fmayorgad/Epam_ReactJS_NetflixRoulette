@@ -14,8 +14,8 @@ export class MovieForm extends React.Component {
     render() {
         return (
             <>
-                <form onSubmit={this.handleSubmmit}>
-                    <div className='movieFormContainer'>
+                <form className='movieFormContainer' onSubmit={this.handleSubmmit}>
+                    <div >
                         <div className='movieFormRow'>
                             <div className='movieFormFieldContainerLarge'>
                                 <label htmlFor='title'>TITLE</label>
@@ -43,8 +43,11 @@ export class MovieForm extends React.Component {
                         <div className='movieFormRow'>
                             <div className='movieFormFieldContainerLarge'>
                                 <label htmlFor='genre'>GENRE SELECTOR</label>
-                                <select name="genre" id="genre" value={this.state.selected}>
-                                    {/*   {this.state.options.map(opt => <option key={opt.id} value={opt.id}>{opt.desc}</option>)}*/}
+                                <select name="genre" id="genre" value={this.state.selected} multiple>
+                                       <option key="2" value="1">Crime</option>
+                                       <option key="2" value="2">Documentary</option>
+                                       <option key="3" value="3">Horror</option>
+                                       <option key="4" value="4">Comedy</option>
                                 </select>
                             </div>
 
@@ -64,7 +67,7 @@ export class MovieForm extends React.Component {
 
                     </div>
                     <div className='movieFormButtonsContainer'>
-                        <button type='button'>RESET</button>
+                        <button className='outlineButton' type='button'>RESET</button>
                         <button type='submit' value='Submit'>SUBMIT</button>
                     </div>
                 </form>
