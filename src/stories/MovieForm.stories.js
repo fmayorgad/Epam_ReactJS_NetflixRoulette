@@ -18,6 +18,10 @@ const handleAction = () => {
     console.log('You have handled that!');
 }
 
+const confirmHandler = ()=>{
+    console.log('Confirmed')
+}
+
 const Template = args => <CustomDialog {...args} />
 
 const editFormValues = {
@@ -53,7 +57,7 @@ export const DeleteMovie = Template.bind({});
 
 DeleteMovie.args = {
     title: 'Deleting a Movie',
-    children: <DeleteMovieForm />,
+    children: <DeleteMovieForm confirmHandler = {confirmHandler} />,
     openDialog: true,
-    handleAction
+    confirmHandler
 }

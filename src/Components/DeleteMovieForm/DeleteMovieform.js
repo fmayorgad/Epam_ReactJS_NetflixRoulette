@@ -6,17 +6,19 @@ export class DeleteMovieForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = { ...props };
+        console.log(props)
     }
 
     handleClick = (e) => {
-        console.log("Confirmed!")
+        console.log("test")
+        this.props.confirmHandler();
     }
 
     render() {
         return (
             <div className='SortControlContainer'>
                 <p>Are your sure you want to delete this movie?</p>
-                <button class="confirmDeleteButton" onClick={() => this.handleClick}>CONFIRM</button>
+                <button className="confirmDeleteButton" onClick={() => this.handleClick()}>CONFIRM</button>
             </div>
         );
     }
