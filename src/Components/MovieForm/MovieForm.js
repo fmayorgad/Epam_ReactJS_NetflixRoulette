@@ -80,21 +80,21 @@ export class MovieForm extends React.Component {
 
                             <div className='movieFormFieldContainerSmall'>
                                 <label htmlFor='runtime'>RUNTIME</label>
-                                <input id='runtime' type='runtime' defaultValue={this.state.runtime} placeholder='Minutes' onChange={this.handleInputChange} />
+                                <input id='runtime' type='runtime' data-testid="genreselector" defaultValue={this.state.runtime} placeholder='Minutes' onChange={this.handleInputChange} />
                             </div>
                         </div>
 
                         <div className='movieFormRow'>
                             <div className="textareaContainer">
-                                <label htmlFor='description'>MOVIE DESCRIPTION</label>
-                                <textarea name="description" id="description" rows="10" defaultValue={this.state.description} palceholder="Description" onChange={this.handleInputChange} />
+                                <label htmlFor='descriptionText'>MOVIE DESCRIPTION</label>
+                                <textarea name="description" id="descriptionText" rows="10" defaultValue={this.state.description} palceholder="Description" data-testif='description' onChange={this.handleInputChange} />
                             </div>
                         </div>
 
                     </div>
                     <div className='movieFormButtonsContainer'>
                         <button className='outlineButton' type='button'>RESET</button>
-                        <button type='submit' value='Submit'>SUBMIT</button>
+                        <button type='submit'>SUBMIT</button>
                     </div>
                 </form>
             </>
