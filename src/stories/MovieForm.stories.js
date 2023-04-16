@@ -1,5 +1,6 @@
 import { MovieForm } from '../Components/MovieForm/MovieForm';
 import { CustomDialog } from '../Components/CustomDialog/CustomDialog';
+import {DeleteMovieForm} from '../Components/DeleteMovieForm/DeleteMovieform';
 
 export default {
     title: 'Components / MovieForm',
@@ -33,7 +34,7 @@ const editFormValues = {
 export const EditMovie = Template.bind({});
 
 EditMovie.args = {
-    title: 'Creating a new Movie',
+    title: 'Editing a Movie',
     children: <MovieForm {...editFormValues}/>,
     openDialog: true,
     handleAction
@@ -44,6 +45,15 @@ export const AddMovie = Template.bind({});
 AddMovie.args = {
     title: 'Creating a new Movie',
     children: <MovieForm />,
+    openDialog: true,
+    handleAction
+}
+
+export const DeleteMovie = Template.bind({});
+
+DeleteMovie.args = {
+    title: 'Deleting a Movie',
+    children: <DeleteMovieForm />,
     openDialog: true,
     handleAction
 }
