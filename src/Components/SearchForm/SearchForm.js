@@ -1,4 +1,5 @@
 import React from 'react';
+import './SearchForm.css';
 
 export class SearchForm extends React.Component {
     constructor(props) {

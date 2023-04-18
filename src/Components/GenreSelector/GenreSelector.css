@@ -1,0 +1,26 @@
+.genreSelectContainer ol {
+  list-style-type: none;
+  display: flex;
+  padding: 0px 20px;
+}
+
+.genreSelectContainer li {
+  text-decoration: none;
+  height: 50px;
+  padding: 0px 10px;
+  color: white;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+
+.genreSelectContainer li:hover {
+  cursor: pointer;
+}
+
+.genreSelectContainer li.active {
+  border-bottom: 4px solid #f65261;
+}
+
+.genreSelectContainer {
+  background: #282c34;
+}

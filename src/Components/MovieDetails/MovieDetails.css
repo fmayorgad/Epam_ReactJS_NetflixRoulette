@@ -1,0 +1,94 @@
+.movieDetailImage {
+  background-size: contain;
+  width: 323.41px;
+  height: 486px;
+}
+
+.movieDetailTitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 60px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+  margin: 0px;
+  max-width: calc(100% - 72px);
+  padding-right: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  mix-blend-mode: normal;
+  opacity: 0.7;
+}
+
+.MovieDetailsContainer {
+  display: flex;
+}
+
+.movieRatingLabel {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  mix-blend-mode: normal;
+  opacity: 0.7;
+}
+
+.detailsDescriptionContainer {
+  display: grid;
+  /* flex-wrap: wrap; */
+  height: fit-content;
+  padding: 0px 20px;
+}
+
+.movieDetailsGenres {
+  width: 100%;
+  margin: 0;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: "Montserrat";
+  mix-blend-mode: normal;
+  opacity: 0.7;
+  color: white;
+}
+
+.movieDetailContainer span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #f65261;
+}
+
+.movieDetailContainer {
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.movieDetailDescription {
+  font-family: "Montserrat";
+  mix-blend-mode: normal;
+  opacity: 0.7;
+  color: white;
+}
+
+.movieDetailMainInfoContainer {
+  display: flex;
+  width: 100%;
+}
+
+.movieDetailContainer  span:first-child{
+  margin-right: 45px;
+}
+
+.movieDetailDescription::first-letter{
+  text-transform: capitalize;
+}
