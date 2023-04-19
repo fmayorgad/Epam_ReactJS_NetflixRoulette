@@ -2,10 +2,6 @@
   display: grid;
 }
 
-.movieFormFieldContainerLarge {
-  width: 65%;
-}
-
 .movieFormFieldContainerSmall {
   display: grid;
   width: 35%;

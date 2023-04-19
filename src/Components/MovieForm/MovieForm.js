@@ -5,7 +5,7 @@ export class MovieForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: props.title ? props.title : '',
+            title: props.title ?? '',
             date: props.date ? props.date : null,
             url: props.url ? props.url : '',
             rating: props.rating ? props.rating : '',

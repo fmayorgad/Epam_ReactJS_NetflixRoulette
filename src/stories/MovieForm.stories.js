@@ -48,7 +48,7 @@ export const AddMovie = Template.bind({});
 
 AddMovie.args = {
     title: 'Creating a new Movie',
-    children: <MovieForm />,
+    children: <MovieForm onSubmit={onSubmit} />,
     openDialog: true,
     handleAction
 }

@@ -6,11 +6,9 @@ export class DeleteMovieForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = { ...props };
-        console.log(props)
     }
 
     handleClick = (e) => {
-        console.log("test")
         this.props.confirmHandler();
     }
 
