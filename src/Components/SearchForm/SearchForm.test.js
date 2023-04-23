@@ -56,7 +56,6 @@ describe('Test SearchForm Component', () => {
         fireEvent.change(input, { target: { value: newValue } });
         fireEvent.keyDown(input, { key: 'Enter', code: 'Enter', charCode: 13, keyCode: 13, target: { value: newValue } })
 
-
         expect(handleInputChangeSpy).toHaveBeenCalledTimes(1);
         expect(handleInputChangeSpy).toHaveBeenCalledWith(newValue);
     })

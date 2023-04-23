@@ -6,8 +6,8 @@
   background-image: url(https://genotipia.com/wp-content/uploads/2020/04/Netflix-Background-prueba-1.jpg);
 }
 
+
 .searchFormContainer input {
-  width: 713px;
   height: 48px;
   left: 178px;
   top: 242px;
@@ -43,3 +43,9 @@
   font-size: 20px;
   border: 0px;
 }
+
+.searchFormContainer form{
+  width: 100%;
+  display: flex;
+}
+

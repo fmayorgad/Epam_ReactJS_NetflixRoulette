@@ -1,0 +1,115 @@
+.movieFormContainer {
+  display: grid;
+}
+
+.movieFormFieldContainerSmall {
+  display: grid;
+  width: 35%;
+}
+
+.movieFormFieldContainerLarge {
+  width: 65%;
+  padding-right: 31px;
+  display: grid;
+}
+
+.movieFormRow {
+  width: 100%;
+  display: flex;
+}
+
+.movieFormRow:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.movieFormRow label {
+  margin-bottom: 5px;
+  color: #f65261;
+  font-family: "Montserrat";
+  font-style: normal;
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 0.88px;
+  text-transform: uppercase;
+}
+
+.textareaContainer {
+  display: grid;
+  width: 100%;
+}
+
+.textareaContainer textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+.movieFormContainer input,
+select,
+textarea {
+  height: 57px;
+  border-radius: 4px;
+  opacity: 80.31;
+  border: 1px solid #424242;
+  box-sizing: border-box;
+  height: 40px;
+  border-radius: 4px;
+  opacity: 80.31;
+  border: 1px solid #424242;
+  box-sizing: border-box;
+  padding: 0px 13px;
+  color: white;
+  background-color: #2e2e2e;
+  font-family: "Montserrat";
+}
+
+.movieFormContainer input,
+select,
+textarea:focus {
+  outline: none;
+}
+
+.movieFormContainer textarea {
+  height: auto;
+  padding: 10px;
+}
+
+::-webkit-calendar-picker-indicator {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%23F65261" color="%23F65261" stroke-color="%23F65261"  stroke="%23F65261"  d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+}
+
+form {
+  min-width: 600px;
+  width: 700px;
+  display: grid;
+}
+
+.movieFormButtonsContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 35px;
+}
+
+.movieFormButtonsContainer button {
+  padding: 0px 50px;
+  height: 44px;
+  left: 905px;
+  top: 242px;
+  background: #f65261;
+  border-radius: 4px;
+  margin: 0px 10px;
+  color: white;
+  font-size: 20px;
+  border: 0px;
+  margin: 0px;
+  font-size: 15px;
+}
+
+.movieFormButtonsContainer .outlineButton {
+  background: transparent;
+  border: 1px solid #f65261;
+  color: #f65261;
+}
+
+.movieFormButtonsContainer button:not(:last-child){
+    margin-right: 15px;
+}
