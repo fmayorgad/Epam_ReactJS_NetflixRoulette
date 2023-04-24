@@ -60,6 +60,7 @@
     "@testing-library/react": "^14.0.0",
     "babel-plugin-named-exports-order": "^0.0.2",
     "cypress": "^12.8.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "prop-types": "^15.8.1",
     "storybook": "^7.0.2",
     "storybook-css-modules-preset": "^1.1.1",

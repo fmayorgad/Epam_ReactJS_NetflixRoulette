@@ -1,7 +1,5 @@
 import './App.css';
-import { SearchForm } from './Components/SearchForm/SearchForm';
-import { GenreSelector } from './Components/GenreSelector/GenreSelector'
-import { MovieTile } from './Components/MovieTileComponent/MovieTile';
+import { MovieListPage } from './Pages/MovieListPage/MovieListPage';
 
 function App() {
 
@@ -21,8 +19,8 @@ function App() {
     genres: ['Drama', 'Action', 'Romance'],
     rating: 9.4,
     duration: '2h 40min',
-    description:'this is a good movie'
-};
+    description: 'this is a good movie'
+  };
 
   const onSearch = function (input) {
     console.log(input);
@@ -38,9 +36,10 @@ function App() {
 
   return (
     <div className="App">
-      <SearchForm onSearch={onSearch} searchQuery='Drama' />
+      {/* <SearchForm onSearch={onSearch} searchQuery='Drama' />
       <GenreSelector selectedGenre={0} genreList={genreList} onSelectGenre={onSelectGenre} />
-      <MovieTile onSelectMovieTile={onSelectMovieTile} {...movieProps}/>
+      <MovieTile onSelectMovieTile={onSelectMovieTile} {...movieProps}/> */}
+      <MovieListPage />
     </div>
   );
 }
