@@ -5,9 +5,22 @@ import './MovieDetails.css';
 export class MovieDetails extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { ...props };
+        this.state = {};
+        this.state.urlImage = props.urlImage ? props.urlImage : '';
+        this.state.name = props.name ? props.name : '';
+        this.state.releaseYear = props.releaseYear ? props.releaseYear : '';
+        this.state.genres = props.genres ? props.genres : [];
+        this.state.rating = props.rating ? props.rating : '';
+        this.state.duration = props.duration ? props.duration : '';
+        this.state.description = props.description ? props.description : '';
     }
-    
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.id !== this.props.id) {
+          this.setState({...this.props})
+        }
+      }
+
     render() {
         return (
             <section className='MovieDetailsContainer'>

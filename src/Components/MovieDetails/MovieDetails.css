@@ -25,6 +25,7 @@
 
 .MovieDetailsContainer {
   display: flex;
+  padding: 0px 47px;
 }
 
 .movieRatingLabel {
@@ -42,6 +43,7 @@
 .detailsDescriptionContainer {
   display: grid;
   /* flex-wrap: wrap; */
+  width: 100%;
   height: fit-content;
   padding: 0px 20px;
 }

@@ -1,0 +1,17 @@
+.appHeader{
+    height: 63px;
+    background-color: #232323;
+    padding: 0px 47px;
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    top: 0px;
+}
+
+.headerLogoText{
+    color: #f25162;
+    font-weight: 500;
+    margin: 0px;
+}

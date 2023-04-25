@@ -28,6 +28,7 @@ export class SearchForm extends React.Component {
     render() {
         return (
             <div className='searchFormContainer'>
+                <h1 className="searchFormTittle">FIND YOUR MOVIE</h1>
                 <form onSubmit={this.handleButtonClicked}>
                     <input role="searchbox" placeholder="What do you want to watch" type="text" onKeyDown={this.handleKeyDown} defaultValue={this.state.searchQuery} onChange={this.handleInputChange} />         
                     <button type="submit"value="Submit" >Search</button>

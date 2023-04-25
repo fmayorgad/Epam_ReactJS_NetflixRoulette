@@ -3,3 +3,11 @@
   align-items: center;
   justify-content: space-between;
 }
+
+.moviesContainer {
+  display: flex;  
+}
+
+.moviesContainer .movieTileContainer:not(:first-child){
+  padding-left:  50px;
+}

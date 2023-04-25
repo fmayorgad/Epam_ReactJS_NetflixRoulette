@@ -1,4 +1,16 @@
 .App {
-  background-color: #282c34;
+  background-color: #232323;
   min-height: 100vh;
+}
+
+.mainSection {
+  padding: 0px 47px;
+  position: relative;
+  background: #232323;
+  z-index: 10;
+}
+
+.mainBodyPage {
+  margin-top: 63px;
+  position: inherit;
 }

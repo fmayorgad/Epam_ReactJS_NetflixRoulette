@@ -3,6 +3,8 @@ import { SearchForm } from '../../Components/SearchForm/SearchForm';
 import { GenreSelector } from '../../Components/GenreSelector/GenreSelector';
 import { SortControl } from '../../Components/SortControl/SortControl';
 import { MovieTile } from '../../Components/MovieTileComponent/MovieTile';
+import { MovieDetails } from '../../Components/MovieDetails/MovieDetails';
+import { Header } from '../../Components/Header/Header';
 import './MovieListPage.css';
 
 const genreList = [
@@ -25,21 +27,35 @@ const sortOptions = [
     }
 ];
 
-const movieProps = {
+const movieProps = [{
     urlImage: 'https://lumiere-a.akamaihd.net/v1/images/image_b88fdde2.jpeg?region=0,0,540,810&width=480',
     name: 'Titanic in the desert',
     releaseYear: 2033,
     genres: ['Drama', 'Action', 'Romance'],
     rating: 9.4,
     duration: '2h 40min',
-    description: 'this is a good movie'
-};
+    description: 'this is a good movie',
+    id: 1
+},
+{
+    urlImage: 'https://cdn.marvel.com/content/1x/antmanandthewaspquantumania_lob_crd_03.jpg',
+    name: 'ANT MAN QUANTUMANIA',
+    releaseYear: 2023,
+    genres: ['Drama', 'Action'],
+    rating: 6.4,
+    duration: '1h 50min',
+    description: 'Solo se sabe que Scott Lang será un personaje clave para este fin. Vemos en los tráilers que Kang negocia con Ant-Man para que ambos salgan beneficiados, pero al final el villano le traiciona.    Lang desea recuperar el tiempo perdido junto a su hija, mientras que el villano desea salir del mundo cuántico. Por este motivo, Kang envía al protagonista a conseguir un raro elemento en el microverso.',
+    id: 2
+}
+];
+
 export function MovieListPage(props) {
 
     const [searchValue, setSearchValue] = useState('');
     const [selectedGenre, setSelectedGenre] = useState(0);
     const [sortValue, setSortValue] = useState(1);
     const [selectedMovieTile, setselectedMovieTile] = useState(null);
+    const [movieList, setMovieList] = useState(movieProps);
 
 
     const onSearch = function (input) {
@@ -54,8 +70,9 @@ export function MovieListPage(props) {
         setSortValue(sortValue);
     }
 
-    const onSelectMovieTile = function (genre) {
-        console.log(genre)
+    const onSelectMovieTile = function (movie) {
+        console.log(movie)
+        setselectedMovieTile(movie);
     }
 
     useEffect(() => {
@@ -65,19 +82,27 @@ export function MovieListPage(props) {
 
     return (
         <>
-            <div>
+            <Header />
+            <div className="mainBodyPage">
                 <section>
-                    <SearchForm onSearch={onSearch} searchQuery='Drama' />
+                    {
+                        selectedMovieTile ? <MovieDetails {...selectedMovieTile} />
+                            : <SearchForm onSearch={onSearch} searchQuery='Drama' />
+                    }
                 </section>
 
-                <section>
+                <section className="mainSection">
                     <div className="genresortContainer">
                         <GenreSelector selectedGenre={selectedGenre} genreList={genreList} onSelectGenre={onSelectGenre} />
                         <SortControl onChange={onSort} selected={sortValue} options={sortOptions} />
                     </div>
 
-                    <div>
-                        <MovieTile {...movieProps} onSelectMovieTile={onSelectMovieTile} />
+                    <div className="moviesContainer">
+                        {
+                            movieList.map(movie => {
+                                return <MovieTile key={movie.id} {...movie} onSelectMovieTile={onSelectMovieTile} />
+                            })
+                        }
                     </div>
                 </section>
             </div>
