@@ -56,7 +56,8 @@ export function MovieListPage(props) {
     const [sortValue, setSortValue] = useState(1);
     const [selectedMovieTile, setselectedMovieTile] = useState(null);
     const [movieList, setMovieList] = useState(movieProps);
-
+    let consumingFetch = false;
+    let controller = new AbortController();
 
     const onSearch = function (input) {
         setSearchValue(input);
@@ -75,9 +76,29 @@ export function MovieListPage(props) {
         setselectedMovieTile(movie);
     }
 
+    const searchMovies = async function () {
+
+        consumingFetch && controller.abort();
+
+        consumingFetch = true;
+
+        controller = new AbortController();
+        const signal = controller.signal
+
+        // Register a listenr.
+        signal.addEventListener("abort", () => {
+            console.log("aborted!")
+        })
+        const response = await fetch("http://localhost:4000/movies?searchBy=title", {
+            signal: controller.signal
+        });
+        const movies = await response.json();
+
+        console.log(movies)
+    }
+
     useEffect(() => {
-        console.log(props);
-        console.log(searchValue);
+        searchMovies();
     }, []);
 
     return (
