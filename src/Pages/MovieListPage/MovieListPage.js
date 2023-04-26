@@ -59,6 +59,8 @@ export function MovieListPage(props) {
     }
 
     const onSort = function (sortValue) {
+        console.log('sortValue :>> ', sortValue);  
+        queryParams.set('sortBy', sortValue === '2' ? 'title' : 'release_date');
         setSortValue(sortValue);
     }
 
@@ -75,7 +77,7 @@ export function MovieListPage(props) {
         const signal = controller.signal
 
         //create queryparams
-        //searchValue.length > 0 && queryParams.append('title', searchValue);
+        queryParams.set('sortOrder', 'asc');
 
         const response = await fetch("http://localhost:4000/movies?" + queryParams.toString(), {
             signal: controller.signal
@@ -106,7 +108,7 @@ export function MovieListPage(props) {
 
     useEffect(() => {
         searchMovies();
-    }, [searchValue, selectedGenre]);
+    }, [searchValue, selectedGenre, sortValue]);
 
     return (
         <>

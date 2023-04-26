@@ -1,5 +1,6 @@
 import React from 'react';
 import './MovieDetails.css';
+import nomovieImage from './nomovie.png';
 
 export class MovieDetails extends React.Component {
 
@@ -13,7 +14,10 @@ export class MovieDetails extends React.Component {
         const description = this.props.description ?? '';
         return (
             <section className='MovieDetailsContainer'>
-                <img alt="moviePoster" className='movieDetailImage' src={urlImage} />
+                <img alt="moviePoster" className='movieDetailImage' src={urlImage} onError={({ currentTarget }) => {
+                    currentTarget.onerror = null;
+                    currentTarget.src = nomovieImage;
+                }}/>
                 <div className='detailsDescriptionContainer'>
                     <div className='movieDetailMainInfoContainer'>
                         <h1 className='movieDetailTitle'>{name}</h1>
