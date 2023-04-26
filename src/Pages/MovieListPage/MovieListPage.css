@@ -1,0 +1,21 @@
+.genresortContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.moviesContainer {
+  display: flex;  
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.moviesContainer::after{
+  content: "";
+  flex-basis: 771px;
+}
+
+/* .moviesContainer .movieTileContainer:not(:first-child){
+  padding-left:  50px;
+}
+ */

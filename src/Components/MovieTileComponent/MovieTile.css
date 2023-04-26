@@ -1,10 +1,10 @@
 .movieTileContainer {
   position: relative;
-  width: 323.41px;
-  display: block;
-  text-decoration: unset;
-  color: #ffffff;
-  padding: 15px 0px;
+    width: 323.41px;
+    display: block;
+    text-decoration: unset;
+    color: #ffffff;
+    padding: 15px 10px;
 }
 
 .movieTileImage {
