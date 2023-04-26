@@ -6,8 +6,16 @@
 
 .moviesContainer {
   display: flex;  
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.moviesContainer .movieTileContainer:not(:first-child){
+.moviesContainer::after{
+  content: "";
+  flex-basis: 771px;
+}
+
+/* .moviesContainer .movieTileContainer:not(:first-child){
   padding-left:  50px;
 }
+ */
